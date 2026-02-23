@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs | InfinityAlgo Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .docs-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="16" fill="black" />
+                    <path d="M16 8L22 22H10L16 8Z" fill="white" />
+                </svg>
+                InfinityAlgo
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="docs.html" data-i18n="nav_docs">Docs</a></li>
+                <li><a href="checkout.html" data-i18n="nav_checkout">Checkout</a></li>
+                <li><button class="lang-switch" id="lang-switch">AR/EN</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="docs-content">
+        <h1 data-i18n="docs_title">Documentation & FAQ</h1>
+
+        <div style="margin-top: 3rem;">
+            <h2>Installation Guide</h2>
+            <p>1. Download the indicator source code from your dashboard after "purchasing" for $0.</p>
+            <p>2. Open TradingView and go to the Pine Editor.</p>
+            <p>3. Paste the code and click "Add to Chart".</p>
+        </div>
+
+        <div style="margin-top: 4rem;">
+            <h2>Detailed FAQ (Everything You Need to Know)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Why is this indicator free?</div>
+                <div>We believe in providing value first. This free indicator serves as an introduction to our
+                    professional ecosystem at InfinityAlgo Academy. It's fully functional and designed to provide
+                    immediate results in your trading analysis.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the "Targets for Overlay" work?</div>
+                <div>The algorithm analyzes volatility and historical pivot points to project high-probability target
+                    zones. Unlike standard indicators, it adapts to current market context in real-time.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is it compatible with other LuxAlgo tools?</div>
+                <div>Yes! It is specifically engineered to complement overlay indicators and LuxAlgo sets. It fills the
+                    gap by providing clear take-profit and exit zones that are often missing in standard setups.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use this for crypto and forex?</div>
+                <div>Absolutely. The mathematical foundation of our "Targets" indicator is asset-agnostic. It works
+                    perfectly on Cryptocurrency, Forex, Stocks, and Indices.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why should I upgrade to InfinityRSI Divergence?</div>
+                <div>While the free indicator shows you WHERE the targets are, the InfinityRSI Divergence shows you WHEN
+                    a reversal is imminent. Combining these two tools creates a complete trading system with a massive
+                    edge.</div>
+            </div>
+        </div>
+
+        <div class="text-center"
+            style="margin-top: 4rem; background: var(--bg-secondary); padding: 3rem; border-radius: 12px;">
+            <h3>Ready to start?</h3>
+            <p class="mb-2">Get the indicator now for free and start seeing the difference.</p>
+            <a href="checkout.html" class="btn btn-primary" data-i18n="btn_get_free">Get it for Free ($0)</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>InfinityAlgo Academy</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        Leading the way in algorithmic trading education and tools.
+                    </p>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        Email: support@infinityalgoacademy.net<br>
+                        Website: infinityalgoacademy.net
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
