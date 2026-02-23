@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | InfinityAlgo Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="16" fill="black" />
+                    <path d="M16 8L22 22H10L16 8Z" fill="white" />
+                </svg>
+                InfinityAlgo
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="docs.html" data-i18n="nav_docs">Docs</a></li>
+                <li><a href="checkout.html" data-i18n="nav_checkout">Checkout</a></li>
+                <li><button class="lang-switch" id="lang-switch">AR/EN</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container" style="padding: 4rem 2rem;">
+        <h1 data-i18n="checkout_title" class="text-center">Secure Checkout</h1>
+
+        <div class="grid-2" style="margin-top: 3rem; align-items: start;">
+            <!-- Order Details -->
+            <div
+                style="background: white; border: 1px solid var(--border); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+                <h3 style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">Your Order</h3>
+                <div style="display: flex; justify-content: space-between; margin: 1.5rem 0;">
+                    <span>Targets for Overlay Indicators LuxAlgo</span>
+                    <span style="font-weight: 700;">$0.00</span>
+                </div>
+
+                <!-- ORDER BUMP -->
+                <div class="order-bump">
+                    <div class="order-bump-header">
+                        <input type="checkbox" id="bump-check" class="order-bump-checkbox">
+                        <div style="font-weight: 800; color: #856404;" data-i18n="order_bump_title">Yes! Upgrade my
+                            analysis with the InfinityRSI Divergence V6.2!</div>
+                    </div>
+                    <div style="font-size: 0.9rem; color: #856404; margin-bottom: 1rem;">
+                        <span class="badge">Limited Deal</span>
+                        <strong style="text-decoration: line-through; margin-left: 0.5rem;">$50.00</strong>
+                        <strong style="font-size: 1.2rem; color: var(--danger);">$12.50</strong>
+                        <span style="color: #28a745; font-weight: 700;" data-i18n="save_amount">(Save $37.50)</span>
+                    </div>
+                    <p style="font-size: 0.85rem; line-height: 1.4;" data-i18n="order_bump_deal">
+                        The Deal: For a limited time, add this powerful indicator to your toolkit for $12.50 ONLY
+                        (Original Price: $50.00). Don't miss this 75% discount it won't be available once you leave this
+                        page.
+                    </p>
+                </div>
+
+                <div
+                    style="display: flex; justify-content: space-between; margin-top: 1.5rem; font-size: 1.25rem; font-weight: 800; border-top: 2px solid var(--border); padding-top: 1rem;">
+                    <span>Total</span>
+                    <span id="total-price">$0.00</span>
+                </div>
+
+                <button class="btn btn-primary"
+                    style="width: 100%; margin-top: 2rem; padding: 1.25rem; font-size: 1.1rem;">Complete
+                    Purchase</button>
+            </div>
+
+            <!-- Payment Info -->
+            <div style="padding: 2rem;">
+                <h3>Payment Security</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">We use industry-standard encryption to protect
+                    your data. Choose your preferred payment method during the next step.</p>
+
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div
+                        style="border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+                        <span>Credit Card / Stripe</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg"
+                            height="20" alt="Stripe">
+                    </div>
+                    <div
+                        style="border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+                        <span>PayPal</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="20"
+                            alt="PayPal">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 InfinityAlgo Academy. 100% Satisfaction
+                Guaranteed.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const bumpCheck = document.getElementById('bump-check');
+        const totalPrice = document.getElementById('total-price');
+
+        bumpCheck.addEventListener('change', () => {
+            totalPrice.textContent = bumpCheck.checked ? '$12.50' : '$0.00';
+            if (bumpCheck.checked) {
+                totalPrice.style.color = 'var(--danger)';
+            } else {
+                totalPrice.style.color = 'var(--text-main)';
+            }
+        });
+    </script>
+</body>
+
+</html>
