@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #000000;
+    --bg-main: #ffffff;
+    --bg-secondary: #f9f9f9;
+    --border: #eaeaea;
+    --text-main: #111111;
+    --text-muted: #666666;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    color: var(--text-main);
+    background: var(--bg-main);
+}
+
+.order-bump {
+    background: #fff8eb;
+    border: 2px dashed #f5a623;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(245, 166, 35, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(245, 166, 35, 0);
+    }
+}
